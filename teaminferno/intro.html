@@ -1,0 +1,84 @@
+<!doctype html>
+<title>Example</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+#charIm {
+    width: 100%;
+    height: 40%;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+#art {
+    color: orangered;
+    font-size: 36pt;
+    text-align: center;
+}
+.col-1 {
+    background: #D7E8D4;
+    flex: 1;
+}
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.content > article {
+    flex: 4;
+    min-height: 60vh;
+}
+header, footer {
+    background: red;
+    height: 20vh;
+}
+header, footer, article, nav {
+    padding: 1em;
+}
+</style>
+<body>
+<nav class="col-1">Character selector 
+  <script>
+function pickChar(){
+	var element = document.getElementById("chars");
+	var char = element.options[element.selectedIndex].value;
+	document.getElementById("charIm").src = "images/"+char+".png";
+	console.log(char);
+}
+function startGame(){
+	var element = document.getElementById("chars");
+	var char = element.options[element.selectedIndex].value;
+	document.getElementById("charSelected").value = char;
+	document.getElementById("startGame").submit();
+	
+}
+</script>
+  <select id="chars">
+    <option value="F1">F1</option>
+    <option value="F2">F2</option>
+    <option value="M1">M1</option>
+    <option value="M2">M2</option>
+  </select>
+  <button id = "butt" onClick="pickChar()"> Select </button>
+  <img id = "charIm" src = "images/F1.png"> </nav>
+<div class="col-2">
+  <form id = "startGame" action="index.html">
+    <input id = "currstat" name="currstat"  type="hidden"   value="000">
+    <input id = "charSelected" name="charSel"  type="hidden"   value="F1">
+  </form>
+  <header></header>
+  <main class="content">
+    <article id = "art">Academy Adventure </article>
+  </main>
+  <button id = "play" onClick="startGame()" style = "margin-right:700px;margin-left: 700px;margin-bottom: 30px; margin-top: auto ">Play</button>
+  <footer></footer>
+</div>
+</body>

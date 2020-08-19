@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+#bgd {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  background: url("../images/GBBackground.png") no-repeat;
+}
+# {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  background: url("../images/GBBackground.png") no-repeat;
+}
+#bgd {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  background: url("../images/GBBackground.png") no-repeat;
+}
+#container {
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  width: 700px;
+  height: 375px;
+}
+#can {
+  position: relative;
+  margin: auto;
+  float: left;
+  width: 500px;
+  height: 375px;
+}
+#videoElement {
+  width: 500px;
+  height: 375px;
+}
+.grayscale {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.sepia {
+  -webkit-filter: sepia(0.8);
+  -moz-filter: sepia(0.8);
+  -o-filter: sepia(0.8);
+  -ms-filter: sepia(0.8);
+  filter: sepia(0.8);
+}
+.blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+.brightness {
+  -webkit-filter: brightness(0.3);
+  -moz-filter: brightness(0.3);
+  -o-filter: brightness(0.3);
+  -ms-filter: brightness(0.3);
+  filter: brightness(0.3);
+}
+.contrast {
+  -webkit-filter: contrast(0.5);
+  -moz-filter: contrast(0.5);
+  -o-filter: contrast(0.5);
+  -ms-filter: contrast(0.5);
+  filter: contrast(0.5);
+}
+.hue-rotate {
+  -webkit-filter: hue-rotate(90deg);
+  -moz-filter: hue-rotate(90deg);
+  -o-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
+.hue-rotate2 {
+  -webkit-filter: hue-rotate(180deg);
+  -moz-filter: hue-rotate(180deg);
+  -o-filter: hue-rotate(180deg);
+  -ms-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
+}
+.hue-rotate3 {
+  -webkit-filter: hue-rotate(270deg);
+  -moz-filter: hue-rotate(270deg);
+  -o-filter: hue-rotate(270deg);
+  -ms-filter: hue-rotate(270deg);
+  filter: hue-rotate(270deg);
+}
+.saturate {
+  -webkit-filter: saturate(10);
+  -moz-filter: saturate(10);
+  -o-filter: saturate(10);
+  -ms-filter: saturate(10);
+  filter: saturate(10);
+}
+.invert {
+  -webkit-filter: invert(1);
+  -moz-filter: invert(1);
+  -o-filter: invert(1);
+  -ms-filter: invert(1);
+  filter: invert(1);
+}
+#filtText {
+  font-size: 32px;
+  font-family: Marker Felt, fantasy;
+  text-align: center;
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  height: 200px;
+  color: #FF4500;
+}
+#buttons {
+  text-align: center;
+  padding-bottom: 250px;
+}
+#b1 {
+  font-family: Marker Felt, fantasy;
+  transform: translateY(4px);
+  background-color: #4CAF50;
+  width: 100px;
+  height: 60px;
+  font-size: 32px;
+  border-radius: 6px;
+}
+#b2 {
+  font-family: Marker Felt, fantasy;
+  transform: translateY(4px);
+  width: 100px;
+  height: 60px;
+  font-size: 32px;
+  border-radius: 6px;
+  background-color: #f44336;
+}
