@@ -1,6 +1,6 @@
 // JavaScript Document
 
-// Provides ease of replacing a single character in a string
+// Provides easy way to replace a single character in a string
 String.prototype.replaceAt = function (index, replacement) {
   return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 }
@@ -12,19 +12,22 @@ var wrongAnswerCount = 0;
 
 // Responses for the first, second and third right answer
 function good1() {
-
+    
+  // Shows puppy
   document.getElementById("puppy").setAttribute("src", "images/puppy.gif");
 
 }
 
 function good2() {
-
+    
+  // Shows balloon
   document.getElementById("balloon").setAttribute("src", "images/baloon.gif");
 
 }
 
 function good3() {
-
+    
+  // Shows trophy
   document.getElementById("trophy").setAttribute("src", "images/trophy.gif");
 
   // Clears buttons after last selection
@@ -35,14 +38,16 @@ function good3() {
 
 // responses for first, second and third wrong answer
 function bad1() {
-
+    
+  // Warps webcam video by making it unusually wide
   canvas.setAttribute("style", "width:1000px");
   document.getElementById("container").setAttribute("style", "width:1000px");
 
 }
 
 function bad2() {
-
+    
+  // Adds all filters to make the image appear ghostly
   var effect = filters[1];
   if (effect) {
     for (i = 0; i < filters.length; i++) {
@@ -53,6 +58,8 @@ function bad2() {
 }
 
 function bad3() {
+    
+  // Rotates the image and makes it smaller giving it the effect of swirling into nothingness
   canvas.setAttribute("style", "transform:rotate(" + tim + "deg)scale(" + 10 / tim + "," + 20 / tim + ");");
   tim++;
 }
@@ -119,7 +126,8 @@ async function wrongAnswer() {
       case 3:
         bad1();
         bad2();
-        document.getElementById("buttons").parentNode.removeChild(document.getElementById("buttons"));
+        // Removes buttons after 3 bad selections
+     document.getElementById("buttons").parentNode.removeChild(document.getElementById("buttons"));
         setInterval(bad3, 30);
         break;
     }
@@ -138,6 +146,8 @@ async function wrongAnswer() {
         document.getElementById('b2').setAttribute("disabled", "disabled");
       }
       await sleep(2000);
+    
+      // Game is complete, returns to home screen
       sendOff();
     }
     document.querySelector('#filtText').innerHTML = tree.Questions[currQ].Q;
@@ -156,6 +166,8 @@ function sleep(ms) {
 
 // Finds level info from URL and sends user back to homescreen with updated page
 function sendOff() {
+  
+  // Obtains URL variables
   urlp = [];
   s = location.toString().split('?');
   if (s != null) {
@@ -164,9 +176,13 @@ function sendOff() {
       u = s[i].split('=');
       urlp[u[0]] = u[1];
     }
+      
+    // Updates URL variable to indicate that game is complete
     var y = urlp['currstat'];
     y = y.replaceAt(1, "1");
     console.log(y);
+      
+    // Creates and submits form to return home
     var x = document.createElement("FORM");
     x.action = 'index.html';
     var charSel = urlp['charSel'];
@@ -217,6 +233,7 @@ if (navigator.mediaDevices.getUserMedia) {
 var warper = null;
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
+
 // Custom video filters
 var iFilter = 0;
 var filters = [

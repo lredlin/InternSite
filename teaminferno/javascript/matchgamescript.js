@@ -58,7 +58,7 @@ function checkForMatch() {
     // If win occurs, checks url variables to return to home screen with appropriate level
     if (counter == 6) {
 
-      // Checks URL variables
+      // Checks URL variables to maintain status of completed games
       urlp = [];
       var s = location.toString().split('?');
       if (s != null) {
@@ -72,7 +72,7 @@ function checkForMatch() {
         y = y.replaceAt(0, "1");
         console.log(y);
 
-        // Submits form to return home
+        // Submits form to return to the home screen once the user has finished the game
         var x = document.createElement("FORM");
         x.action = 'index.html';
         x.innerHTML = "<input type = 'hidden' name='currstat'  value=" + y + "><input type = 'hidden' name='charSel'  value=" + charSel + ">";
@@ -82,6 +82,8 @@ function checkForMatch() {
     }
     return;
   }
+    
+  // Returns the cards to their original positions
   unflipCards();
 }
 
@@ -126,12 +128,13 @@ function resetBoard() {
 (function shuffle() {
   cards.forEach(card => {
 
-    let ramdomPos = Math.floor(Math.random() * 12);
-    card.style.order = ramdomPos;
+    let randomPos = Math.floor(Math.random() * 12);
+      
+    card.style.order = randomPos;
 
   });
 
 })();
 
-// Flips cards on click 
+// Event listener to flip cards on click
 cards.forEach(card => card.addEventListener('click', flipCard));
