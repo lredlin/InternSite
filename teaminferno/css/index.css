@@ -1,14 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-  display: table;
-  margin-left: 300px;
+  
 }
-body {}
+body {
+    
+}
 .congrats {
   position: absolute;
-  z-index: 1;
-  margin-top: 50px;
+  z-index: 2;
+  width:50%;
+  height:50%;
+  margin-top: 100px;
   margin-left: 325px;
   visibility: hidden;
 }
@@ -16,7 +19,7 @@ body {}
   position: absolute;
   z-index: 1;
   top: 10px;
-  left: 315px;
+  left: 50px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -73,7 +76,7 @@ body {}
 #charIm {
   position: absolute;
   z-index: 1;
-  margin-left: 575px;
+  margin-left: 650px;
   margin-top: 450px;
 }
 .menu {
@@ -82,16 +85,18 @@ body {}
   top: 100px;
   right: 200px;
   width: 60%;
-  height: 60% margin:auto;
+  height: 60%;
+    
+margin:auto;
   visibility: hidden;
 }
 .btn-group {
   position: absolute;
   margin: auto;
-  top: 700px;
-  bottom: 128px;
-  left: 615px;
-  right: 625px;
+  top: 600px;
+  bottom: 0px;
+  left: 215px;
+  right: 425px;
   float: left;
 }
 .btn-group form {

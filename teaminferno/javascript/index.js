@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
     
     // "CEO Level", in this case the buttons are all removed and a celebration animation is set
     if (urlp['currstat'] == '111') {
-      document.body.style = "background: url('images/CEOLevel.jpg') no-repeat;";
+      document.body.style = "background: url('images/CEOLevel.jpg') no-repeat center center fixed;background-size:1000px;";
       document.getElementById("cong").style.visibility = "visible";
       var element = document.getElementById("charIm");
       element.parentNode.removeChild(element);
